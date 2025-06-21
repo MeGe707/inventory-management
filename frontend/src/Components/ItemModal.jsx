@@ -23,7 +23,7 @@ export default function ItemModal({ itemId, onClose }) {
       };
       
       const { data } = await axios.post(
-        "http://localhost:5000/user/update-item",
+        "https://inventory-management-2-t8hh.onrender.com/user/update-item",
         payload,
         { headers: { token } }
       );

@@ -24,7 +24,7 @@ const AddExcelList = () => {
       formData.append("file", file);
 
       const response = await axios.post(
-        "http://localhost:5000/user/upload-excel-items",
+        "https://inventory-management-2-t8hh.onrender.com/user/upload-excel-items",
         formData,
         {
           headers: {

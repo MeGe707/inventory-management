@@ -18,7 +18,7 @@ const Login = () => {
     event.preventDefault();
     try {
       if (state === "User Log In") {
-        const data = await axios.post('http://localhost:5000/user/login-user', { email, password });
+        const data = await axios.post('https://inventory-management-2-t8hh.onrender.com/user/login-user', { email, password });
         if(data.data.success) {
           localStorage.setItem('token', data.data.token);
           setToken(data.data.token);

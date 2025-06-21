@@ -28,7 +28,7 @@ const AddItem = () => {
         description
       };
 
-      const { data } = await axios.post('http://localhost:5000/user/add-item', itemData, {
+      const { data } = await axios.post('https://inventory-management-2-t8hh.onrender.com/user/add-item', itemData, {
         headers: { token },
       });
 

@@ -17,7 +17,7 @@ const AppContextProvider = (props) => {
     const getAllItems = async () => {
 
         try {
-            const data = await axios.get("http://localhost:5000/user/get-all-items", {headers:{token}})
+            const data = await axios.get("https://inventory-management-2-t8hh.onrender.com/user/get-all-items", {headers:{token}})
             if (data.data.success) {
                 setItems(data.data.items)
             
@@ -34,7 +34,7 @@ const AppContextProvider = (props) => {
 
     const deleteItem = async (itemId) => {
         try {
-            const data = await axios.post('http://localhost:5000/user/delete-item', {itemId}, {headers:{token}})
+            const data = await axios.post('https://inventory-management-2-t8hh.onrender.com/user/delete-item', {itemId}, {headers:{token}})
             if (data.data.success) {
                 toast.success(data.data.message)
                 getAllItems()
@@ -48,7 +48,7 @@ const AppContextProvider = (props) => {
 
     const getDeletedItems = async () => {
         try {
-            const data = await axios.get('http://localhost:5000/user/get-deleted-items', {headers:{token}})
+            const data = await axios.get('https://inventory-management-2-t8hh.onrender.com/user/get-deleted-items', {headers:{token}})
             if (data.data.success) {
                 setDeletedItems(data.data.items)
               
@@ -61,7 +61,7 @@ const AppContextProvider = (props) => {
     const getItem = async (itemId) => {
         console.log(itemId)
         try {
-            const data = await axios.post('http://localhost:5000/user/get-item', {itemId}, {headers:{token}})
+            const data = await axios.post('https://inventory-management-2-t8hh.onrender.com/user/get-item', {itemId}, {headers:{token}})
             if (data.data.success) {
                 setItemData(data.data.item)
             } else {
